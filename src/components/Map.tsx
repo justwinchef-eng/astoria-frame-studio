@@ -9,9 +9,7 @@ const Map = () => {
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<mapboxgl.Map | null>(null);
   const marker = useRef<mapboxgl.Marker | null>(null);
-  const [mapboxToken, setMapboxToken] = useState<string>('');
-  const [tokenInput, setTokenInput] = useState<string>('');
-  const [isTokenSet, setIsTokenSet] = useState(false);
+  const MAPBOX_TOKEN = 'pk.eyJ1Ijoic3dlcnZlc2t6IiwiYSI6ImNtY2loOXY2aDA1bjEya3ExNnpmc3c2dWkifQ.W5VDbnQW7s8gDD61BAn7Eg';
   const { toast } = useToast();
 
   // Astoria Art & Framing location
@@ -55,79 +53,24 @@ const Map = () => {
       // Show popup by default
       marker.current.togglePopup();
 
-      setIsTokenSet(true);
-      localStorage.setItem('mapbox_token', token);
-      
-      toast({
-        title: "Map Loaded",
-        description: "Mapbox map initialized successfully",
-      });
     } catch (error) {
       console.error('Error initializing map:', error);
       toast({
         title: "Error",
-        description: "Failed to initialize map. Please check your Mapbox token.",
+        description: "Failed to initialize map. Please check your connection.",
         variant: "destructive",
       });
     }
   };
 
   useEffect(() => {
-    // Check if token exists in localStorage
-    const savedToken = localStorage.getItem('mapbox_token');
-    if (savedToken) {
-      setMapboxToken(savedToken);
-      initializeMap(savedToken);
-    }
+    // Initialize map with the public token
+    initializeMap(MAPBOX_TOKEN);
 
     return () => {
       map.current?.remove();
     };
   }, []);
-
-  const handleSetToken = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (tokenInput.trim()) {
-      setMapboxToken(tokenInput);
-      initializeMap(tokenInput);
-    }
-  };
-
-  if (!isTokenSet) {
-    return (
-      <div className="w-full h-[500px] flex items-center justify-center bg-muted rounded-lg">
-        <div className="max-w-md p-8 bg-card rounded-lg shadow-elegant">
-          <h3 className="text-xl font-semibold text-primary mb-4">
-            Mapbox Token Required
-          </h3>
-          <p className="text-sm text-foreground/70 mb-4">
-            To display the interactive map, please enter your Mapbox public token. 
-            Get your free token at{' '}
-            <a 
-              href="https://mapbox.com/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-primary underline"
-            >
-              mapbox.com
-            </a>
-          </p>
-          <form onSubmit={handleSetToken} className="space-y-4">
-            <Input
-              type="text"
-              value={tokenInput}
-              onChange={(e) => setTokenInput(e.target.value)}
-              placeholder="pk.eyJ1..."
-              className="w-full"
-            />
-            <Button type="submit" className="w-full gradient-elegant text-primary-foreground">
-              Load Map
-            </Button>
-          </form>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="relative w-full h-[500px] rounded-lg overflow-hidden shadow-elegant">
