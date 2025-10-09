@@ -1,5 +1,6 @@
 import { Frame, Palette, Award, Sparkles, Image, Maximize2, Home, Calendar, Briefcase, Star, Layers, Box } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 import framesSelection1 from "@/assets/frames-selection-1.jpg";
 import framesSelection2 from "@/assets/frames-selection-2.jpg";
 
@@ -81,23 +82,24 @@ const Services = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {services.map((service, index) => (
-            <Card 
-              key={index}
-              className="border-0 shadow-elegant hover:shadow-xl transition-smooth hover:-translate-y-1 bg-card animate-fade-in"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <CardContent className="p-8">
-                <div className="w-14 h-14 bg-gradient-elegant rounded-lg flex items-center justify-center mb-6">
-                  <service.icon className="w-7 h-7 text-primary-foreground" />
-                </div>
-                <h3 className="text-2xl font-semibold text-primary mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-foreground/70 leading-relaxed">
-                  {service.description}
-                </p>
-              </CardContent>
-            </Card>
+            <Link to="/services" key={index}>
+              <Card 
+                className="border-0 shadow-elegant hover:shadow-xl transition-smooth hover:-translate-y-1 bg-card animate-fade-in cursor-pointer"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <CardContent className="p-8">
+                  <div className="w-14 h-14 bg-gradient-elegant rounded-lg flex items-center justify-center mb-6">
+                    <service.icon className="w-7 h-7 text-primary-foreground" />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-primary mb-3">
+                    {service.title}
+                  </h3>
+                  <p className="text-foreground/70 leading-relaxed">
+                    {service.description}
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
         
