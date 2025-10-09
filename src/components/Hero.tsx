@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, MapPin } from "lucide-react";
 import heroImage from "@/assets/hero-framing.jpg";
 import storefrontImage from "@/assets/custom-framing-storefront.png";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Hero = () => {
   return (
@@ -37,6 +38,7 @@ const Hero = () => {
             >
               Get Free Estimate
             </Button>
+            <WhatsAppButton />
             <Button 
               size="lg" 
               variant="outline"
