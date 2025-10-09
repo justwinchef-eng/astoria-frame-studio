@@ -16,6 +16,8 @@ import corporateFraming7 from "@/assets/corporate-framing-7.jpg";
 import corporateFraming8 from "@/assets/corporate-framing-8.jpg";
 import corporateFraming9 from "@/assets/corporate-framing-9.jpg";
 import corporateFraming10 from "@/assets/corporate-framing-10.jpg";
+import customMirror1 from "@/assets/custom-framed-mirrors-1.jpg";
+import customMirror2 from "@/assets/custom-framed-mirrors-2.jpg";
 
 const services = [
   {
@@ -197,8 +199,44 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Frame Selection Gallery */}
+      {/* Custom Framed Mirrors */}
       <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <p className="text-sm tracking-[0.3em] text-muted-foreground uppercase mb-4">
+                Elegant Reflections
+              </p>
+              <h2 className="text-4xl md:text-5xl font-bold font-playfair text-primary mb-6">
+                Custom Framed Mirrors
+              </h2>
+              <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
+                Transform any space with our beautifully crafted custom framed mirrors, designed to your specifications
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="rounded-lg overflow-hidden">
+                <img 
+                  src={customMirror1} 
+                  alt="Custom framed decorative mirror" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="rounded-lg overflow-hidden">
+                <img 
+                  src={customMirror2} 
+                  alt="Ornate custom mirror frame detail" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Frame Selection Gallery */}
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
