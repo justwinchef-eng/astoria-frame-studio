@@ -1,11 +1,17 @@
 import frameDetail from "@/assets/frame-detail.jpg";
+import ownerPhoto from "@/assets/owner-photo.jpg";
 
 const About = () => {
   return (
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-          <div className="order-2 md:order-1 animate-fade-in">
+          <div className="order-2 md:order-1 animate-fade-in space-y-6">
+            <img 
+              src={ownerPhoto} 
+              alt="Meet the owner of Astoria Art & Framing" 
+              className="rounded-lg shadow-elegant w-full h-auto"
+            />
             <img 
               src={frameDetail} 
               alt="Custom frame detail" 

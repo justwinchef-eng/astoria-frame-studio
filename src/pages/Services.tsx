@@ -18,6 +18,7 @@ import corporateFraming9 from "@/assets/corporate-framing-9.jpg";
 import corporateFraming10 from "@/assets/corporate-framing-10.jpg";
 import customMirror1 from "@/assets/custom-framed-mirrors-1.jpg";
 import customMirror2 from "@/assets/custom-framed-mirrors-2.jpg";
+import consultationService from "@/assets/consultation-service.jpg";
 
 const services = [
   {
@@ -115,8 +116,45 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Services Grid */}
+      {/* Bringing Your Vision to Life */}
       <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="rounded-lg overflow-hidden">
+                <img 
+                  src={consultationService} 
+                  alt="Personal consultation and framing service" 
+                  className="w-full h-full object-cover rounded-lg"
+                />
+              </div>
+              <div>
+                <h2 className="text-4xl md:text-5xl font-bold font-playfair text-primary mb-6">
+                  Bringing Your Vision to Life
+                </h2>
+                <div className="space-y-4 text-lg text-foreground/80 leading-relaxed">
+                  <p>
+                    Our dedicated team works closely with you to understand your unique vision 
+                    and bring it to life with expert craftsmanship and personalized attention.
+                  </p>
+                  <p>
+                    From selecting the perfect frame to choosing archival materials, we guide 
+                    you through every step of the creative process to ensure your artwork is 
+                    beautifully presented and protected for generations.
+                  </p>
+                  <p>
+                    Experience the difference of one-on-one consultation where your style, 
+                    preferences, and space are our top priorities.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {services.map((service, index) => (

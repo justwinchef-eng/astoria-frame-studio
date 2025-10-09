@@ -5,6 +5,8 @@ import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
 import gabrielPerici from "@/assets/gabriel-perici-art.jpg";
 import galleryInterior from "@/assets/gallery-interior.jpg";
+import artistGabriel from "@/assets/artist-gabriel-perici.jpg";
+import galleryArtPiece from "@/assets/gallery-art-piece.jpg";
 
 const GalleryPage = () => {
   return (
@@ -42,6 +44,11 @@ const GalleryPage = () => {
             
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
+                <img 
+                  src={artistGabriel} 
+                  alt="Gabriel Perici painting in his studio" 
+                  className="rounded-lg w-full h-auto"
+                />
                 <img 
                   src={gabrielPerici} 
                   alt="Gabriel Perici original painting" 
@@ -126,6 +133,18 @@ const GalleryPage = () => {
                   <div className="mt-4">
                     <h3 className="text-xl font-semibold font-playfair text-primary">Fine Art Selection</h3>
                     <p className="text-foreground/70">Oil paintings, giclées, and lithographs</p>
+                  </div>
+                </div>
+                
+                <div className="rounded-lg overflow-hidden">
+                  <img 
+                    src={galleryArtPiece} 
+                    alt="Beautifully framed artwork" 
+                    className="w-full h-auto hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="mt-4">
+                    <h3 className="text-xl font-semibold font-playfair text-primary">Expert Framing</h3>
+                    <p className="text-foreground/70">Showcasing art with precision and care</p>
                   </div>
                 </div>
                 
