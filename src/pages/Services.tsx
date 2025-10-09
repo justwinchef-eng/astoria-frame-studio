@@ -2,8 +2,20 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Frame, Palette, Award, Sparkles, Image, Maximize2, Home, Calendar, Briefcase, Star, Layers, Box } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import framesSelection1 from "@/assets/frames-selection-1.jpg";
 import framesSelection2 from "@/assets/frames-selection-2.jpg";
+import corporateFraming1 from "@/assets/corporate-framing-1.jpg";
+import corporateFraming2 from "@/assets/corporate-framing-2.jpg";
+import corporateFraming3 from "@/assets/corporate-framing-3.jpg";
+import corporateFraming4 from "@/assets/corporate-framing-4.jpg";
+import corporateFraming5 from "@/assets/corporate-framing-5.jpg";
+import corporateFraming6 from "@/assets/corporate-framing-6.jpg";
+import corporateFraming7 from "@/assets/corporate-framing-7.jpg";
+import corporateFraming8 from "@/assets/corporate-framing-8.jpg";
+import corporateFraming9 from "@/assets/corporate-framing-9.jpg";
+import corporateFraming10 from "@/assets/corporate-framing-10.jpg";
 
 const services = [
   {
@@ -126,6 +138,61 @@ const Services = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Corporate Framing Gallery */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <p className="text-sm tracking-[0.3em] text-muted-foreground uppercase mb-4">
+                Professional Solutions
+              </p>
+              <h2 className="text-4xl md:text-5xl font-bold font-playfair text-primary mb-6">
+                Corporate Framing
+              </h2>
+              <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
+                Serving major corporations including Marriott Hotels, NBC Studios, and NYC's finest businesses
+              </p>
+            </div>
+            
+            <Carousel
+              plugins={[
+                Autoplay({
+                  delay: 3000,
+                }),
+              ]}
+              className="w-full"
+            >
+              <CarouselContent>
+                {[
+                  corporateFraming1,
+                  corporateFraming2,
+                  corporateFraming3,
+                  corporateFraming4,
+                  corporateFraming5,
+                  corporateFraming6,
+                  corporateFraming7,
+                  corporateFraming8,
+                  corporateFraming9,
+                  corporateFraming10,
+                ].map((image, index) => (
+                  <CarouselItem key={index}>
+                    <div className="rounded-lg overflow-hidden">
+                      <img
+                        src={image}
+                        alt={`Corporate framing example ${index + 1}`}
+                        className="w-full h-[600px] object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-4" />
+              <CarouselNext className="right-4" />
+            </Carousel>
           </div>
         </div>
       </section>
