@@ -1,72 +1,99 @@
 import { Button } from "@/components/ui/button";
-import { Phone, MapPin } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import { useRef } from "react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-framing.jpg";
-import storefrontImage from "@/assets/custom-framing-storefront.png";
-import WhatsAppButton from "@/components/WhatsAppButton";
+import gallery1 from "@/assets/gallery-1.jpg";
+import gallery2 from "@/assets/gallery-2.jpg";
+import galleryInterior from "@/assets/gallery-interior.jpg";
+import frameDetail from "@/assets/frame-detail.jpg";
+import gabrielPericiArt from "@/assets/gabriel-perici-art.jpg";
 
 const Hero = () => {
+  const plugin = useRef(
+    Autoplay({ delay: 4000, stopOnInteraction: false })
+  );
+
+  const slides = [
+    {
+      image: heroImage,
+      title: "Custom Framing Excellence",
+      subtitle: "Preserving Your Memories with Artistry"
+    },
+    {
+      image: gallery1,
+      title: "Fine Art Gallery",
+      subtitle: "Curated Collections & Local Artists"
+    },
+    {
+      image: galleryInterior,
+      title: "Expert Restoration",
+      subtitle: "Bringing Art Back to Life"
+    },
+    {
+      image: frameDetail,
+      title: "Handcrafted Frames",
+      subtitle: "Quality Materials & Craftsmanship"
+    },
+    {
+      image: gabrielPericiArt,
+      title: "Featured Artists",
+      subtitle: "Gabriel Perici & More"
+    }
+  ];
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src={heroImage} 
-          alt="Astoria Art & Custom Framing interior" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/60"></div>
-      </div>
-      
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-20 text-center">
-        <div className="max-w-4xl mx-auto animate-fade-in">
-          <p className="text-accent text-lg md:text-xl mb-4 font-medium tracking-wide">
-            Since 1985
-          </p>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground mb-6 leading-tight">
-            Astoria Art & <br />Custom Framing
-          </h1>
-          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Premier custom framing and fine art gallery in the heart of Astoria, 
-            minutes from Manhattan
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button 
-              size="lg" 
-              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-6 text-lg shadow-elegant transition-smooth"
-            >
-              Get Free Estimate
-            </Button>
-            <WhatsAppButton />
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold px-8 py-6 text-lg transition-smooth"
-            >
-              View Gallery
-            </Button>
-          </div>
-          
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-primary-foreground">
-            <a 
-              href="tel:1-718-204-7555" 
-              className="flex items-center gap-2 hover:text-accent transition-smooth"
-            >
-              <Phone className="w-5 h-5" />
-              <span className="text-lg font-medium">1-718-204-7555</span>
-            </a>
-            <span className="hidden sm:inline text-primary-foreground/50">•</span>
-            <div className="flex items-center gap-2">
-              <MapPin className="w-5 h-5" />
-              <span className="text-lg font-medium">34-84 30th Ave, Astoria, NYC</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      {/* Decorative Element */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10"></div>
+    <section className="relative h-screen">
+      <Carousel
+        plugins={[plugin.current]}
+        className="w-full h-full"
+        opts={{
+          loop: true,
+        }}
+      >
+        <CarouselContent className="h-screen">
+          {slides.map((slide, index) => (
+            <CarouselItem key={index} className="relative h-screen">
+              <div className="absolute inset-0">
+                <img
+                  src={slide.image}
+                  alt={slide.title}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
+              </div>
+              
+              <div className="relative h-full flex items-center justify-center">
+                <div className="text-center text-white px-4 max-w-4xl mx-auto animate-fade-in">
+                  <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+                    {slide.title}
+                  </h1>
+                  <p className="text-xl md:text-2xl mb-8 text-white/90">
+                    {slide.subtitle}
+                  </p>
+                  {index === 0 && (
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                      <Link to="/contact">
+                        <Button size="lg" className="text-lg px-8">
+                          Get Free Estimate
+                        </Button>
+                      </Link>
+                      <Link to="/gallery">
+                        <Button size="lg" variant="outline" className="text-lg px-8 bg-white/10 text-white border-white/20 hover:bg-white/20">
+                          View Gallery
+                        </Button>
+                      </Link>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="left-4" />
+        <CarouselNext className="right-4" />
+      </Carousel>
     </section>
   );
 };
