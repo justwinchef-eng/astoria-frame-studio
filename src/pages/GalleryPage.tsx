@@ -8,6 +8,7 @@ import galleryInterior from "@/assets/gallery-interior.jpg";
 import artistGabriel from "@/assets/artist-gabriel-perici.jpg";
 import galleryArtPiece from "@/assets/gallery-art-piece.jpg";
 import storefront from "@/assets/custom-framing-storefront.png";
+import galleryWallDisplay from "@/assets/gallery-wall-display.jpg";
 
 const GalleryPage = () => {
   return (
@@ -157,6 +158,18 @@ const GalleryPage = () => {
                   <div className="mt-4">
                     <h3 className="text-xl font-semibold font-playfair text-primary">Expert Framing</h3>
                     <p className="text-foreground/70">Showcasing art with precision and care</p>
+                  </div>
+                </div>
+                
+                <div className="rounded-lg overflow-hidden">
+                  <img 
+                    src={galleryWallDisplay} 
+                    alt="Art gallery wall display with diverse framed artwork" 
+                    className="w-full h-auto hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="mt-4">
+                    <h3 className="text-xl font-semibold font-playfair text-primary">Curated Collection</h3>
+                    <p className="text-foreground/70">Diverse selection for every taste</p>
                   </div>
                 </div>
                 
