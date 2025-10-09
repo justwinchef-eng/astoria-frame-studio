@@ -7,6 +7,7 @@ import gabrielPerici from "@/assets/gabriel-perici-art.jpg";
 import galleryInterior from "@/assets/gallery-interior.jpg";
 import artistGabriel from "@/assets/artist-gabriel-perici.jpg";
 import galleryArtPiece from "@/assets/gallery-art-piece.jpg";
+import storefront from "@/assets/custom-framing-storefront.png";
 
 const GalleryPage = () => {
   return (
@@ -15,17 +16,28 @@ const GalleryPage = () => {
       
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-background">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-sm tracking-[0.3em] text-muted-foreground uppercase mb-4">
-            Fine Art Collection
-          </p>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-playfair text-primary mb-6">
-            Art Gallery
-          </h1>
-          <p className="text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed">
-            Explore our curated collection of oil paintings, giclées, lithographs, 
-            posters, and photographs from talented artists.
-          </p>
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <p className="text-sm tracking-[0.3em] text-muted-foreground uppercase mb-4">
+                Fine Art Collection
+              </p>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-playfair text-primary mb-6">
+                Art Gallery
+              </h1>
+              <p className="text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed">
+                Explore our curated collection of oil paintings, giclées, lithographs, 
+                posters, and photographs from talented artists.
+              </p>
+            </div>
+            <div className="rounded-lg overflow-hidden">
+              <img 
+                src={storefront} 
+                alt="Astoria Art & Framing storefront in Astoria, NY" 
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
