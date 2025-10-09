@@ -1,5 +1,8 @@
 import { Button } from "@/components/ui/button";
 import galleryInterior from "@/assets/gallery-interior.jpg";
+import gallery1 from "@/assets/gallery-1.jpg";
+import gallery2 from "@/assets/gallery-2.jpg";
+import gabrielPerici from "@/assets/gabriel-perici-art.jpg";
 
 const Gallery = () => {
   return (
@@ -44,18 +47,31 @@ const Gallery = () => {
               </div>
             </div>
             
-            <div className="animate-fade-in">
+            <div className="animate-fade-in space-y-6">
+              <div className="grid grid-cols-2 gap-4">
+                <img 
+                  src={gallery1} 
+                  alt="Framed artwork in gallery" 
+                  className="rounded-lg shadow-elegant w-full h-auto"
+                />
+                <img 
+                  src={gallery2} 
+                  alt="Custom framed art pieces" 
+                  className="rounded-lg shadow-elegant w-full h-auto"
+                />
+              </div>
               <img 
-                src={galleryInterior} 
-                alt="Art gallery interior" 
+                src={gabrielPerici} 
+                alt="Gabriel Perici original painting" 
                 className="rounded-lg shadow-elegant w-full h-auto"
               />
-              <div className="mt-6 p-6 bg-gradient-gold rounded-lg text-accent-foreground">
+              <div className="p-6 bg-gradient-gold rounded-lg text-accent-foreground">
                 <p className="text-lg font-semibold mb-2">
                   🎨 Featured Artist: Gabriel Perici
                 </p>
                 <p className="text-base">
-                  Stop by anytime to explore the stunning collection of original paintings and prints.
+                  Born in New York City, Gabriel Perici received his degree from Rome University for 
+                  contemporary painting and restoration. Stop by anytime to explore his stunning collection.
                 </p>
               </div>
             </div>

@@ -1,11 +1,13 @@
-import { Frame, Palette, Award, Sparkles, Image, Maximize2 } from "lucide-react";
+import { Frame, Palette, Award, Sparkles, Image, Maximize2, Home, Calendar, Briefcase, Star, Layers, Box } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import framesSelection1 from "@/assets/frames-selection-1.jpg";
+import framesSelection2 from "@/assets/frames-selection-2.jpg";
 
 const services = [
   {
     icon: Frame,
     title: "Custom Framing",
-    description: "Expert framing performed on-site by master craftsmen. Free estimates on all projects."
+    description: "Expert framing performed on-site with over 1,500 mouldings, fillets and liners to choose from. Free estimates on all projects."
   },
   {
     icon: Award,
@@ -19,18 +21,48 @@ const services = [
   },
   {
     icon: Sparkles,
-    title: "Archival Matting",
-    description: "Museum-quality archival materials to preserve your artwork for generations."
+    title: "Archival Matting & Special Matting",
+    description: "Museum-quality archival materials and special matting techniques to preserve your artwork for generations."
   },
   {
     icon: Image,
     title: "Diploma & Certificate Framing",
-    description: "Professional framing for diplomas, certificates, photographs, and needlepoint."
+    description: "Professional framing for diplomas, certificates, Ketubahs, photographs, and posters."
+  },
+  {
+    icon: Layers,
+    title: "Large Custom Framing",
+    description: "Specialized services for oversized artwork and large-scale framing projects."
+  },
+  {
+    icon: Box,
+    title: "Custom Shadowboxes",
+    description: "Custom-made shadowboxes with spacer separation for inlaid projects and memorabilia."
   },
   {
     icon: Maximize2,
-    title: "Specialty Services",
-    description: "Beveled mirrors, shadowboxes, fabric wrapping, French lining, and architectural mouldings."
+    title: "Beveled Mirrors",
+    description: "Custom beveled mirrors designed and crafted to your specifications."
+  },
+  {
+    icon: Star,
+    title: "Needlepoint & Fabric",
+    description: "Expert needlepoint framing with fabric wrapping and French lining options."
+  },
+  {
+    icon: Home,
+    title: "Antique Furniture Restoration",
+    description: "Professional restoration services for antique furniture and ornamental plaster mouldings."
+  },
+  {
+    icon: Calendar,
+    title: "Same Day Service",
+    description: "Same day custom framing service available for urgent projects."
+  },
+  {
+    icon: Briefcase,
+    title: "Home & Office Consultation",
+    description: "Professional on-site consultation services at your home or office."
   }
 ];
 
@@ -69,16 +101,48 @@ const Services = () => {
           ))}
         </div>
         
-        <div className="mt-16 text-center">
-          <div className="inline-block p-8 bg-card rounded-lg shadow-elegant max-w-3xl">
-            <h3 className="text-2xl font-semibold text-primary mb-4">
-              Additional Services Include:
-            </h3>
-            <p className="text-lg text-foreground/80 leading-relaxed">
-              Antique furniture restoration, ornamental and architectural plaster mouldings for 
-              interior design, special matting, fillet enhancement, and much more. Visit us for 
-              a personalized consultation.
-            </p>
+        <div className="mt-16">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="rounded-lg overflow-hidden shadow-elegant">
+                <img 
+                  src={framesSelection1} 
+                  alt="Custom frame selection" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="rounded-lg overflow-hidden shadow-elegant">
+                <img 
+                  src={framesSelection2} 
+                  alt="Frame mouldings collection" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            
+            <div className="text-center p-8 bg-card rounded-lg shadow-elegant">
+              <h3 className="text-2xl font-semibold text-primary mb-4">
+                Additional Specialty Services
+              </h3>
+              <p className="text-lg text-foreground/80 leading-relaxed mb-6">
+                Ornamental and architectural plaster mouldings for interior design, fillet enhancement, 
+                fabric wrapping, French lining, and spacer separation for inlaid projects.
+              </p>
+              <div className="grid md:grid-cols-3 gap-6 text-left">
+                <div className="p-4 bg-muted/50 rounded-lg">
+                  <p className="font-semibold text-primary mb-2">📦 Corporate Framing</p>
+                  <p className="text-sm text-foreground/70">Serving Marriott Hotels, NBC Studios, and major NYC corporations</p>
+                </div>
+                <div className="p-4 bg-muted/50 rounded-lg">
+                  <p className="font-semibold text-primary mb-2">🎨 Custom Artwork Orders</p>
+                  <p className="text-sm text-foreground/70">We can order specific artwork from our catalogs and websites</p>
+                </div>
+                <div className="p-4 bg-muted/50 rounded-lg">
+                  <p className="font-semibold text-primary mb-2">📞 Call for Consultation</p>
+                  <p className="text-sm text-foreground/70">Contact Claude at 1-718-204-7555 for estimates</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
