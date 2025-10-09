@@ -43,50 +43,72 @@ const GalleryPage = () => {
       </section>
 
       {/* Featured Artist */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-24 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <p className="text-sm tracking-[0.3em] text-muted-foreground uppercase mb-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <p className="text-sm tracking-[0.3em] text-muted-foreground uppercase mb-4 animate-fade-in">
                 Featured Artist
               </p>
-              <h2 className="text-4xl md:text-5xl font-bold font-playfair text-primary mb-6">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-playfair text-primary mb-4 animate-fade-in">
                 Gabriel Perici
               </h2>
+              <div className="w-24 h-1 bg-primary/20 mx-auto"></div>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6">
-                <img 
-                  src={artistGabriel} 
-                  alt="Gabriel Perici painting in his studio" 
-                  className="rounded-lg w-full h-auto"
-                />
-                <img 
-                  src={gabrielPerici} 
-                  alt="Gabriel Perici original painting" 
-                  className="rounded-lg w-full h-auto"
-                />
+            <div className="grid lg:grid-cols-5 gap-8 items-start">
+              <div className="lg:col-span-2 space-y-6">
+                <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <img 
+                    src={artistGabriel} 
+                    alt="Gabriel Perici painting in his studio" 
+                    className="w-full h-auto hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <img 
+                    src={gabrielPerici} 
+                    alt="Gabriel Perici original painting" 
+                    className="w-full h-auto hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
               </div>
               
-              <div className="space-y-6">
-                <p className="text-lg text-foreground/80 leading-relaxed">
-                  Gabriel Perici was born on August 31st, 1965 in New York City, 
-                  but spent most of his youth in Italy. He received his degree from 
-                  Rome University for contemporary painting and restoration.
-                </p>
-                <p className="text-lg text-foreground/80 leading-relaxed">
-                  He returned to the United States and attended Miami Dade University. 
-                  Inspired by the vibrant art scene, his work captures emotion and 
-                  movement through stunning detail and masterful technique.
-                </p>
-                <p className="text-lg text-foreground/80 leading-relaxed">
-                  Stop by our gallery anytime to explore his beautiful collection of 
-                  original paintings and prints.
-                </p>
+              <div className="lg:col-span-3 space-y-8">
+                <div className="bg-background/60 backdrop-blur-sm rounded-xl p-8 shadow-md border border-border/50">
+                  <h3 className="text-2xl font-semibold font-playfair text-primary mb-6">About the Artist</h3>
+                  <div className="space-y-4">
+                    <p className="text-lg text-foreground/80 leading-relaxed">
+                      Gabriel Perici was born on August 31st, 1965 in New York City, 
+                      but spent most of his youth in Italy. He received his degree from 
+                      Rome University for contemporary painting and restoration.
+                    </p>
+                    <p className="text-lg text-foreground/80 leading-relaxed">
+                      He returned to the United States and attended Miami Dade University. 
+                      Inspired by the vibrant art scene, his work captures emotion and 
+                      movement through stunning detail and masterful technique.
+                    </p>
+                    <p className="text-lg text-foreground/80 leading-relaxed">
+                      Stop by our gallery anytime to explore his beautiful collection of 
+                      original paintings and prints.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="grid sm:grid-cols-2 gap-6">
+                  <div className="bg-background/60 backdrop-blur-sm rounded-xl p-6 border border-border/50">
+                    <h4 className="text-lg font-semibold font-playfair text-primary mb-2">Education</h4>
+                    <p className="text-foreground/70">Rome University - Contemporary Painting & Restoration</p>
+                  </div>
+                  <div className="bg-background/60 backdrop-blur-sm rounded-xl p-6 border border-border/50">
+                    <h4 className="text-lg font-semibold font-playfair text-primary mb-2">Style</h4>
+                    <p className="text-foreground/70">Contemporary with Classical Technique</p>
+                  </div>
+                </div>
+                
                 <Button 
                   size="lg"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground mt-4"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground w-full sm:w-auto px-12"
                 >
                   View Collection
                 </Button>
@@ -97,94 +119,109 @@ const GalleryPage = () => {
       </section>
 
       {/* Gallery Grid */}
-      <section className="py-20 bg-background">
+      <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold font-playfair text-primary mb-6">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <p className="text-sm tracking-[0.3em] text-muted-foreground uppercase mb-4">
+                Browse Our Work
+              </p>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-playfair text-primary mb-6">
                 Our Collection
               </h2>
-              <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
+              <p className="text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
                 Each piece carefully selected to bring beauty and inspiration to your space
               </p>
+              <div className="w-24 h-1 bg-primary/20 mx-auto mt-6"></div>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="space-y-8">
-                <div className="rounded-lg overflow-hidden">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
+                <div className="overflow-hidden">
                   <img 
                     src={gallery1} 
                     alt="Framed artwork in gallery" 
-                    className="w-full h-auto hover:scale-105 transition-transform duration-500"
+                    className="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="mt-4">
-                    <h3 className="text-xl font-semibold font-playfair text-primary">Custom Framed Art</h3>
-                    <p className="text-foreground/70">Professional framing enhances every piece</p>
-                  </div>
                 </div>
-                
-                <div className="rounded-lg overflow-hidden">
-                  <img 
-                    src={galleryInterior} 
-                    alt="Gallery interior" 
-                    className="w-full h-auto hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="mt-4">
-                    <h3 className="text-xl font-semibold font-playfair text-primary">Gallery Space</h3>
-                    <p className="text-foreground/70">Visit our elegant showroom</p>
-                  </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="text-2xl font-semibold font-playfair mb-2">Custom Framed Art</h3>
+                  <p className="text-white/90">Professional framing enhances every piece</p>
                 </div>
               </div>
               
-              <div className="space-y-8 md:mt-16">
-                <div className="rounded-lg overflow-hidden">
+              <div className="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
+                <div className="overflow-hidden">
+                  <img 
+                    src={galleryInterior} 
+                    alt="Gallery interior" 
+                    className="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="text-2xl font-semibold font-playfair mb-2">Gallery Space</h3>
+                  <p className="text-white/90">Visit our elegant showroom</p>
+                </div>
+              </div>
+              
+              <div className="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
+                <div className="overflow-hidden">
                   <img 
                     src={gallery2} 
                     alt="Custom framed art pieces" 
-                    className="w-full h-auto hover:scale-105 transition-transform duration-500"
+                    className="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="mt-4">
-                    <h3 className="text-xl font-semibold font-playfair text-primary">Fine Art Selection</h3>
-                    <p className="text-foreground/70">Oil paintings, giclées, and lithographs</p>
-                  </div>
                 </div>
-                
-                <div className="rounded-lg overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="text-2xl font-semibold font-playfair mb-2">Fine Art Selection</h3>
+                  <p className="text-white/90">Oil paintings, giclées, and lithographs</p>
+                </div>
+              </div>
+              
+              <div className="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
+                <div className="overflow-hidden">
                   <img 
                     src={galleryArtPiece} 
                     alt="Beautifully framed artwork" 
-                    className="w-full h-auto hover:scale-105 transition-transform duration-500"
+                    className="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="mt-4">
-                    <h3 className="text-xl font-semibold font-playfair text-primary">Expert Framing</h3>
-                    <p className="text-foreground/70">Showcasing art with precision and care</p>
-                  </div>
                 </div>
-                
-                <div className="rounded-lg overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="text-2xl font-semibold font-playfair mb-2">Expert Framing</h3>
+                  <p className="text-white/90">Showcasing art with precision and care</p>
+                </div>
+              </div>
+              
+              <div className="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
+                <div className="overflow-hidden">
                   <img 
                     src={galleryWallDisplay} 
                     alt="Art gallery wall display with diverse framed artwork" 
-                    className="w-full h-auto hover:scale-105 transition-transform duration-500"
+                    className="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="mt-4">
-                    <h3 className="text-xl font-semibold font-playfair text-primary">Curated Collection</h3>
-                    <p className="text-foreground/70">Diverse selection for every taste</p>
-                  </div>
                 </div>
-                
-                <div className="p-8 bg-accent/10 rounded-lg border border-accent/20">
-                  <h3 className="text-2xl font-semibold font-playfair text-primary mb-4">
-                    Custom Orders Available
-                  </h3>
-                  <p className="text-foreground/80 leading-relaxed mb-6">
-                    We can order specific artwork from our extensive catalogs and partner galleries. 
-                    Let us help you find the perfect piece for your space.
-                  </p>
-                  <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                    Inquire About Custom Orders
-                  </Button>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="text-2xl font-semibold font-playfair mb-2">Curated Collection</h3>
+                  <p className="text-white/90">Diverse selection for every taste</p>
                 </div>
+              </div>
+              
+              <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl p-8 border-2 border-primary/20 hover:border-primary/40 transition-colors duration-300 flex flex-col justify-center">
+                <h3 className="text-3xl font-semibold font-playfair text-primary mb-4">
+                  Custom Orders Available
+                </h3>
+                <p className="text-foreground/80 leading-relaxed mb-6 text-lg">
+                  We can order specific artwork from our extensive catalogs and partner galleries. 
+                  Let us help you find the perfect piece for your space.
+                </p>
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground w-full">
+                  Inquire About Custom Orders
+                </Button>
               </div>
             </div>
           </div>
