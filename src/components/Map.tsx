@@ -12,9 +12,9 @@ const Map = () => {
   const MAPBOX_TOKEN = 'pk.eyJ1Ijoic3dlcnZlc2t6IiwiYSI6ImNtY2loOXY2aDA1bjEya3ExNnpmc3c2dWkifQ.W5VDbnQW7s8gDD61BAn7Eg';
   const { toast } = useToast();
 
-  // Astoria Art & Framing location
+  // Astoria Art & Framing location - 34-04 30th Ave., Astoria, NY 11103
   const storeLat = 40.7644;
-  const storeLng = -73.9215;
+  const storeLng = -73.9227;
 
   const initializeMap = (token: string) => {
     if (!mapContainer.current) return;
@@ -42,10 +42,10 @@ const Map = () => {
           new mapboxgl.Popup({ offset: 25 })
             .setHTML(
               '<h3 style="font-weight: bold; margin-bottom: 8px;">Astoria Art & Custom Framing</h3>' +
-              '<p style="margin: 4px 0;">34-84 30th Avenue</p>' +
+              '<p style="margin: 4px 0;">34-04 30th Ave.</p>' +
               '<p style="margin: 4px 0;">Astoria, NY 11103</p>' +
               '<p style="margin: 8px 0;"><a href="tel:1-718-204-7555" style="color: #8B1538; font-weight: 600;">1-718-204-7555</a></p>' +
-              '<a href="https://www.google.com/maps/dir/?api=1&destination=40.7644,-73.9215" target="_blank" style="color: #8B1538; text-decoration: underline;">Get Directions</a>'
+              '<a href="https://www.google.com/maps/dir/?api=1&destination=40.7644,-73.9227" target="_blank" style="color: #8B1538; text-decoration: underline;">Get Directions</a>'
             )
         )
         .addTo(map.current);
