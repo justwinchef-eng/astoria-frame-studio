@@ -36,8 +36,7 @@ const ContactPage = () => {
                 </div>
                 <h3 className="text-xl font-semibold font-playfair mb-3">Location</h3>
                 <p className="text-foreground/70 leading-relaxed">
-                  34-84 30th Avenue<br />
-                  Between 34th & 35th Streets<br />
+                  34-04 30th Ave.<br />
                   Astoria, NY 11103
                 </p>
               </CardContent>
@@ -147,8 +146,7 @@ const ContactPage = () => {
                   <div>
                     <p className="text-foreground/70 text-sm mb-1">Address</p>
                     <p className="text-foreground font-medium">
-                      34-84 30th Avenue<br />
-                      Between 34th & 35th Streets<br />
+                      34-04 30th Ave.<br />
                       Astoria, NY 11103
                     </p>
                   </div>
@@ -161,7 +159,7 @@ const ContactPage = () => {
                   </div>
                 </div>
                 <a 
-                  href="https://www.google.com/maps/dir/?api=1&destination=40.7644,-73.9215"
+                  href="https://www.google.com/maps/dir/?api=1&destination=34-04+30th+Ave+Astoria+NY+11103"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full"
