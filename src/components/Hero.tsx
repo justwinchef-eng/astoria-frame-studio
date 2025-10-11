@@ -78,20 +78,27 @@ const Hero = () => {
                   <p className="text-xl md:text-2xl mb-8 text-white/90">
                     {slide.subtitle}
                   </p>
-                  {index === 0 && (
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                      <Link to="/contact">
-                        <Button size="lg" className="text-lg px-8">
-                          Get Free Estimate
-                        </Button>
-                      </Link>
-                      <Link to="/gallery">
-                        <Button size="lg" variant="outline" className="text-lg px-8 bg-white/10 text-white border-white/20 hover:bg-white/20">
-                          View Gallery
-                        </Button>
-                      </Link>
-                    </div>
-                  )}
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <Link to="/contact">
+                      <Button size="lg" className="text-lg px-8">
+                        Get Free Estimate
+                      </Button>
+                    </Link>
+                    <Link to="/gallery">
+                      <Button size="lg" variant="outline" className="text-lg px-8 bg-white/10 text-white border-white/20 hover:bg-white/20">
+                        View Gallery
+                      </Button>
+                    </Link>
+                    <a 
+                      href="https://www.google.com/maps/dir/?api=1&destination=34-04+30th+Ave+Astoria+NY+11103"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button size="lg" variant="outline" className="text-lg px-8 bg-white/10 text-white border-white/20 hover:bg-white/20">
+                        Get Directions
+                      </Button>
+                    </a>
+                  </div>
                 </div>
               </div>
             </CarouselItem>
@@ -100,19 +107,6 @@ const Hero = () => {
         <CarouselPrevious className="left-4" />
         <CarouselNext className="right-4" />
       </Carousel>
-      
-      {/* Fixed Get Directions Button - Visible on all slides */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
-        <a 
-          href="https://www.google.com/maps/dir/?api=1&destination=34-04+30th+Ave+Astoria+NY+11103"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Button size="lg" className="text-lg px-8 shadow-lg">
-            Get Directions
-          </Button>
-        </a>
-      </div>
     </section>
   );
 };
