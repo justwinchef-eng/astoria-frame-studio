@@ -3,6 +3,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
+import storefrontExterior from "@/assets/storefront-exterior.jpg";
 import heroImage from "@/assets/hero-framing.jpg";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
@@ -16,6 +17,11 @@ const Hero = () => {
   );
 
   const slides = [
+    {
+      image: storefrontExterior,
+      title: "Astoria Art & Custom Framing",
+      subtitle: "Quality Custom Framing & Fine Art Since 1986"
+    },
     {
       image: heroImage,
       title: "Custom Framing Excellence",
