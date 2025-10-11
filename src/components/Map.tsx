@@ -13,8 +13,8 @@ const Map = () => {
   const { toast } = useToast();
 
   // Astoria Art & Framing location - 34-04 30th Ave., Astoria, NY 11103
-  const storeLat = 40.7644;
-  const storeLng = -73.9227;
+  const storeLat = 40.7659;
+  const storeLng = -73.9187;
 
   const initializeMap = (token: string) => {
     if (!mapContainer.current) return;
@@ -45,7 +45,7 @@ const Map = () => {
               '<p style="margin: 4px 0;">34-04 30th Ave.</p>' +
               '<p style="margin: 4px 0;">Astoria, NY 11103</p>' +
               '<p style="margin: 8px 0;"><a href="tel:1-718-204-7555" style="color: #8B1538; font-weight: 600;">1-718-204-7555</a></p>' +
-              '<a href="https://www.google.com/maps/dir/?api=1&destination=40.7644,-73.9227" target="_blank" style="color: #8B1538; text-decoration: underline;">Get Directions</a>'
+              '<a href="https://www.google.com/maps/dir/?api=1&destination=40.7659,-73.9187" target="_blank" style="color: #8B1538; text-decoration: underline;">Get Directions</a>'
             )
         )
         .addTo(map.current);
