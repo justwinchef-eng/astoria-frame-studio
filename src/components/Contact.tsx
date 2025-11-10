@@ -1,7 +1,6 @@
-import { MapPin, Phone, Clock, Tag } from "lucide-react";
+import { MapPin, Phone, Clock, Tag, Instagram } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import Map from "@/components/Map";
-import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Contact = () => {
   return (
@@ -105,7 +104,13 @@ const Contact = () => {
                       Call Now
                     </button>
                   </a>
-                  <WhatsAppButton className="flex-1" />
+                  <button 
+                    onClick={() => {}}
+                    className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold px-6 py-3 rounded-md shadow-elegant transition-smooth flex items-center justify-center gap-2"
+                  >
+                    <Instagram className="w-5 h-5" />
+                    Instagram
+                  </button>
                 </div>
               </CardContent>
             </Card>
