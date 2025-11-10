@@ -12,7 +12,7 @@ const About = () => {
       <section className="pt-32 pb-20 bg-background">
         <div className="container mx-auto px-4 text-center">
           <p className="text-sm tracking-[0.3em] text-muted-foreground uppercase mb-4">
-            Since 1985
+            Since 2000
           </p>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-playfair text-primary mb-6">
             About Us
@@ -33,8 +33,8 @@ const About = () => {
               </h2>
               <p className="text-lg text-foreground/80 leading-relaxed">
                 Welcome to <span className="font-semibold text-primary">Astoria Art & Framing</span>, 
-                established in 1985 in the heart of Astoria, just minutes from Manhattan, New York City. 
-                For nearly four decades, we have been committed to providing each and every client with 
+                established in 2000 in the heart of Astoria, just minutes from Manhattan, New York City. 
+                For over two decades, we have been committed to providing each and every client with 
                 personal, creative, and valuable solutions to their framing and decorating needs.
               </p>
               <p className="text-lg text-foreground/80 leading-relaxed">

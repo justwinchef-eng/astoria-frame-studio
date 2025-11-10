@@ -21,7 +21,7 @@ const About = () => {
           
           <div className="order-1 md:order-2 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-              Expert Craftsmanship Since 1985
+              Expert Craftsmanship Since 2000
             </h2>
             <div className="space-y-4 text-lg text-foreground/80 leading-relaxed">
               <p>

@@ -9,7 +9,7 @@ const Footer = () => {
                 Astoria Art & Framing
               </h3>
               <p className="text-background/80 leading-relaxed">
-                Premier custom framing and art gallery serving New York City since 1985.
+                Premier custom framing and art gallery serving New York City since 2000.
               </p>
             </div>
             

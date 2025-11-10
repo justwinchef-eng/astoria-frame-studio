@@ -20,7 +20,7 @@ const Hero = () => {
     {
       image: storefrontExterior,
       title: "Astoria Art & Framing",
-      subtitle: "Quality Custom Framing & Fine Art Since 1986"
+      subtitle: "Quality Custom Framing & Fine Art Since 2000"
     },
     {
       image: heroImage,
