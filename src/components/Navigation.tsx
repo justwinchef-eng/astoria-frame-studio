@@ -23,7 +23,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex flex-col">
-            <span className="text-2xl font-bold font-playfair text-primary tracking-tight">
+            <span className="text-2xl font-bold font-playfair text-red-600 tracking-tight">
               Astoria Art & Framing
             </span>
             <span className="text-xs tracking-[0.3em] text-muted-foreground uppercase">
