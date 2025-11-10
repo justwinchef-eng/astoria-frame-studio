@@ -116,17 +116,19 @@ const GalleryPage = () => {
                 </div>
               </div>
               
-              <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl p-8 border-2 border-primary/20 hover:border-primary/40 transition-colors duration-300 flex flex-col justify-center">
-                <h3 className="text-3xl font-semibold font-playfair text-primary mb-4">
-                  Custom Orders Available
-                </h3>
-                <p className="text-foreground/80 leading-relaxed mb-6 text-lg">
-                  We can order specific artwork from our extensive catalogs and partner galleries. 
-                  Let us help you find the perfect piece for your space.
-                </p>
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground w-full">
-                  Inquire About Custom Orders
-                </Button>
+              <div className="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
+                <div className="overflow-hidden">
+                  <img 
+                    src={storefront} 
+                    alt="Custom framing storefront" 
+                    className="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="text-2xl font-semibold font-playfair mb-2">Professional Service</h3>
+                  <p className="text-white/90">Expert framing and art consultation</p>
+                </div>
               </div>
             </div>
           </div>
