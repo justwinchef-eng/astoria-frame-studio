@@ -40,19 +40,6 @@ const GalleryPage = () => {
       <section className="pt-8 pb-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <p className="text-sm tracking-[0.3em] text-muted-foreground uppercase mb-4">
-                Browse Our Work
-              </p>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-playfair text-primary mb-6">
-                Our Collection
-              </h2>
-              <p className="text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
-                Each piece carefully selected to bring beauty and inspiration to your space
-              </p>
-              <div className="w-24 h-1 bg-primary/20 mx-auto mt-6"></div>
-            </div>
-            
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
                 <div className="overflow-hidden">
