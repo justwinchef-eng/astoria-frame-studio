@@ -19,7 +19,7 @@ const Hero = () => {
   const slides = [
     {
       image: storefrontExterior,
-      title: "Astoria Art & Custom Framing",
+      title: "Astoria Art & Framing",
       subtitle: "Quality Custom Framing & Fine Art Since 1986"
     },
     {
@@ -72,7 +72,7 @@ const Hero = () => {
               
               <div className="relative h-full flex items-center justify-center">
                 <div className="text-center text-white px-4 max-w-4xl mx-auto animate-fade-in">
-                  <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+                  <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-red-600">
                     {slide.title}
                   </h1>
                   <p className="text-xl md:text-2xl mb-8 text-white/90">
