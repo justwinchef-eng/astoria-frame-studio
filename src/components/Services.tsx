@@ -8,47 +8,56 @@ const services = [
   {
     icon: Frame,
     title: "Custom Framing",
-    description: "Expert framing performed on-site with over 1,500 mouldings, fillets and liners to choose from. Free estimates on all projects."
+    description: "Expert framing performed on-site with over 1,500 mouldings, fillets and liners to choose from. Free estimates on all projects.",
+    path: "/services/custom-framing"
   },
   {
     icon: Sparkles,
     title: "Archival Matting & Special Matting",
-    description: "Museum-quality archival materials and special matting techniques to preserve your artwork for generations."
+    description: "Museum-quality archival materials and special matting techniques to preserve your artwork for generations.",
+    path: "/services/archival-matting"
   },
   {
     icon: Image,
     title: "Diploma & Certificate Framing",
-    description: "Professional framing for diplomas, certificates, Ketubahs, photographs, and posters."
+    description: "Professional framing for diplomas, certificates, Ketubahs, photographs, and posters.",
+    path: "/services/diploma-framing"
   },
   {
     icon: Layers,
     title: "Large Custom Framing",
-    description: "Specialized services for oversized artwork and large-scale framing projects."
+    description: "Specialized services for oversized artwork and large-scale framing projects.",
+    path: "/services/large-framing"
   },
   {
     icon: Box,
     title: "Custom Shadowboxes",
-    description: "Custom-made shadowboxes with spacer separation for inlaid projects and memorabilia."
+    description: "Custom-made shadowboxes with spacer separation for inlaid projects and memorabilia.",
+    path: "/services/shadowboxes"
   },
   {
     icon: Maximize2,
     title: "Beveled Mirrors",
-    description: "Custom beveled mirrors designed and crafted to your specifications."
+    description: "Custom beveled mirrors designed and crafted to your specifications.",
+    path: "/services/beveled-mirrors"
   },
   {
     icon: Star,
     title: "Needlepoint & Fabric",
-    description: "Expert needlepoint framing with fabric wrapping and French lining options."
+    description: "Expert needlepoint framing with fabric wrapping and French lining options.",
+    path: "/services/needlepoint-framing"
   },
   {
     icon: Calendar,
     title: "Same Day Service",
-    description: "Same day custom framing service available for urgent projects."
+    description: "Same day custom framing service available for urgent projects.",
+    path: "/services/same-day-service"
   },
   {
     icon: Briefcase,
     title: "Home & Office Consultation",
-    description: "Professional on-site consultation services at your home or office."
+    description: "Professional on-site consultation services at your home or office.",
+    path: "/services/corporate-services"
   }
 ];
 
@@ -67,7 +76,7 @@ const Services = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {services.map((service, index) => (
-            <Link to="/services" key={index}>
+            <Link to={service.path} key={index}>
               <Card 
                 className="border-0 shadow-elegant hover:shadow-xl transition-smooth hover:-translate-y-1 bg-card animate-fade-in cursor-pointer"
                 style={{ animationDelay: `${index * 100}ms` }}
