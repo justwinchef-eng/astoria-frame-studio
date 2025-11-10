@@ -72,7 +72,7 @@ const Hero = () => {
               
               <div className="relative h-full flex items-center justify-center">
                 <div className="text-center text-white px-4 max-w-4xl mx-auto animate-fade-in">
-                  <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-red-600">
+                  <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
                     {slide.title}
                   </h1>
                   <p className="text-xl md:text-2xl mb-8 text-white/90">
