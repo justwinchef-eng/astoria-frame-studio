@@ -79,11 +79,6 @@ const Hero = () => {
                     {slide.subtitle}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Link to="/contact">
-                      <Button size="lg" className="text-lg px-8">
-                        Get Free Estimate
-                      </Button>
-                    </Link>
                     <Link to="/gallery">
                       <Button size="lg" variant="outline" className="text-lg px-8 bg-white/10 text-white border-white/20 hover:bg-white/20">
                         View Gallery
