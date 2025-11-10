@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import TextSizeControl from "@/components/TextSizeControl";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,20 +33,23 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`text-sm tracking-wider uppercase transition-colors ${
-                  isActive(link.path)
-                    ? "text-primary font-medium"
-                    : "text-foreground/70 hover:text-primary"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+          <div className="hidden md:flex items-center gap-4">
+            <div className="flex items-center gap-8">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={`text-sm tracking-wider uppercase transition-colors ${
+                    isActive(link.path)
+                      ? "text-primary font-medium"
+                      : "text-foreground/70 hover:text-primary"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+            <TextSizeControl />
             <a href="tel:1-718-204-7555">
               <Button
                 size="sm"
