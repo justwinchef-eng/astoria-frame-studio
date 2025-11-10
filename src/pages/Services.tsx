@@ -4,6 +4,7 @@ import PromoPopup from "@/components/PromoPopup";
 import { Frame, Palette, Award, Sparkles, Image, Maximize2, Home, Calendar, Briefcase, Star, Layers, Box } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Link } from "react-router-dom";
 import Autoplay from "embla-carousel-autoplay";
 import framesSelection1 from "@/assets/frames-selection-1.jpg";
 import framesSelection2 from "@/assets/frames-selection-2.jpg";
@@ -26,55 +27,64 @@ const services = [
     icon: Frame,
     title: "Custom Framing",
     description: "Expert framing performed on-site with over 1,500 mouldings, fillets and liners to choose from. Free estimates on all projects.",
-    details: "All custom framing projects are executed on the premises by our expert framers. Our pricing is based on the size and complexity of your project."
+    details: "All custom framing projects are executed on the premises by our expert framers. Our pricing is based on the size and complexity of your project.",
+    path: "/services/custom-framing"
   },
   {
     icon: Sparkles,
     title: "Archival Matting",
     description: "Museum-quality archival materials and special matting techniques.",
-    details: "We exclusively use state-of-the-art archival materials to preserve your artwork for generations."
+    details: "We exclusively use state-of-the-art archival materials to preserve your artwork for generations.",
+    path: "/services/archival-matting"
   },
   {
     icon: Image,
     title: "Diploma & Certificate Framing",
     description: "Professional framing for diplomas, certificates, Ketubahs, photographs, and posters.",
-    details: "Perfect presentation for your important documents and achievements."
+    details: "Perfect presentation for your important documents and achievements.",
+    path: "/services/diploma-framing"
   },
   {
     icon: Layers,
     title: "Large Custom Framing",
     description: "Specialized services for oversized artwork and large-scale framing projects.",
-    details: "We handle projects of any size with precision and care."
+    details: "We handle projects of any size with precision and care.",
+    path: "/services/large-framing"
   },
   {
     icon: Box,
     title: "Custom Shadowboxes",
     description: "Custom-made shadowboxes with spacer separation for inlaid projects and memorabilia.",
-    details: "Perfect for three-dimensional objects, medals, and special keepsakes."
+    details: "Perfect for three-dimensional objects, medals, and special keepsakes.",
+    path: "/services/shadowboxes"
   },
   {
     icon: Maximize2,
     title: "Beveled Mirrors",
     description: "Custom beveled mirrors designed and crafted to your specifications.",
-    details: "High-quality mirror work for residential and commercial spaces."
+    details: "High-quality mirror work for residential and commercial spaces.",
+    path: "/services/beveled-mirrors"
   },
   {
     icon: Star,
     title: "Needlepoint & Fabric",
     description: "Expert needlepoint framing with fabric wrapping and French lining options.",
-    details: "Specialized techniques to showcase textile art beautifully."
+    details: "Specialized techniques to showcase textile art beautifully.",
+    path: "/services/needlepoint-framing"
   },
   {
     icon: Calendar,
     title: "Same Day Service",
     description: "Same day custom framing service available for urgent projects.",
-    details: "When you need it fast, we deliver without compromising quality."
+    details: "When you need it fast, we deliver without compromising quality.",
+    path: "/services/same-day-service"
   },
   {
     icon: Briefcase,
     title: "Corporate Services",
     description: "Professional on-site consultation and corporate framing services.",
-    details: "Serving Marriott Hotels, NBC Studios, and major NYC corporations with comprehensive framing solutions."
+    details: "Serving Marriott Hotels, NBC Studios, and major NYC corporations with comprehensive framing solutions.",
+    path: "/services/corporate-services"
   }
 ];
 
@@ -141,25 +151,26 @@ const Services = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {services.map((service, index) => (
-              <Card 
-                key={index}
-                className="border-0 bg-card hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              >
-                <CardContent className="p-8">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-                    <service.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold font-playfair text-primary mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-foreground/80 leading-relaxed mb-4">
-                    {service.description}
-                  </p>
-                  <p className="text-sm text-foreground/60 leading-relaxed">
-                    {service.details}
-                  </p>
-                </CardContent>
-              </Card>
+              <Link to={service.path} key={index}>
+                <Card 
+                  className="border-0 bg-card hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer h-full"
+                >
+                  <CardContent className="p-8">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                      <service.icon className="w-6 h-6 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-semibold font-playfair text-primary mb-3">
+                      {service.title}
+                    </h3>
+                    <p className="text-foreground/80 leading-relaxed mb-4">
+                      {service.description}
+                    </p>
+                    <p className="text-sm text-foreground/60 leading-relaxed">
+                      {service.details}
+                    </p>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
