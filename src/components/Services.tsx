@@ -11,16 +11,6 @@ const services = [
     description: "Expert framing performed on-site with over 1,500 mouldings, fillets and liners to choose from. Free estimates on all projects."
   },
   {
-    icon: Award,
-    title: "Frame Restoration",
-    description: "Professional restoration of antique and damaged frames to their original beauty."
-  },
-  {
-    icon: Palette,
-    title: "Oil Restoration",
-    description: "Expert restoration services for oil paintings and valuable artwork."
-  },
-  {
     icon: Sparkles,
     title: "Archival Matting & Special Matting",
     description: "Museum-quality archival materials and special matting techniques to preserve your artwork for generations."
@@ -49,11 +39,6 @@ const services = [
     icon: Star,
     title: "Needlepoint & Fabric",
     description: "Expert needlepoint framing with fabric wrapping and French lining options."
-  },
-  {
-    icon: Home,
-    title: "Antique Furniture Restoration",
-    description: "Professional restoration services for antique furniture and ornamental plaster mouldings."
   },
   {
     icon: Calendar,

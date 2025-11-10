@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import PromoPopup from "@/components/PromoPopup";
 import { Frame, Palette, Award, Sparkles, Image, Maximize2, Home, Calendar, Briefcase, Star, Layers, Box } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -26,18 +27,6 @@ const services = [
     title: "Custom Framing",
     description: "Expert framing performed on-site with over 1,500 mouldings, fillets and liners to choose from. Free estimates on all projects.",
     details: "All custom framing projects are executed on the premises by our expert framers. Our pricing is based on the size and complexity of your project."
-  },
-  {
-    icon: Award,
-    title: "Frame Restoration",
-    description: "Professional restoration of antique and damaged frames to their original beauty.",
-    details: "We carefully restore antique frames using traditional techniques and materials to preserve their historical integrity."
-  },
-  {
-    icon: Palette,
-    title: "Oil Restoration",
-    description: "Expert restoration services for oil paintings and valuable artwork.",
-    details: "Our specialists handle delicate restoration work on oil paintings, preserving the artist's original vision."
   },
   {
     icon: Sparkles,
@@ -74,12 +63,6 @@ const services = [
     title: "Needlepoint & Fabric",
     description: "Expert needlepoint framing with fabric wrapping and French lining options.",
     details: "Specialized techniques to showcase textile art beautifully."
-  },
-  {
-    icon: Home,
-    title: "Antique Furniture Restoration",
-    description: "Professional restoration services for antique furniture and ornamental plaster mouldings.",
-    details: "Complete restoration services including architectural plaster mouldings for interior design."
   },
   {
     icon: Calendar,
@@ -332,6 +315,7 @@ const Services = () => {
       </section>
 
       <Footer />
+      <PromoPopup />
     </div>
   );
 };
