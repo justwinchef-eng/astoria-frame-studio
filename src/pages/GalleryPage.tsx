@@ -16,7 +16,7 @@ const GalleryPage = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-background">
+      <section className="pt-28 pb-12 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center">
@@ -37,7 +37,7 @@ const GalleryPage = () => {
 
 
       {/* Gallery Grid */}
-      <section className="py-24 bg-background">
+      <section className="pt-8 pb-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
