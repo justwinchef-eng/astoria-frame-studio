@@ -75,12 +75,12 @@ const Artists = () => {
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { img: artwork1, title: "Abstract Expression", artist: "Gabriel Perici", price: "$2,500" },
-              { img: artwork2, title: "Urban Dreams", artist: "Gabriel Perici", price: "$1,800" },
-              { img: artwork3, title: "Color Symphony", artist: "Gabriel Perici", price: "$3,200" },
-              { img: artwork4, title: "Light Studies", artist: "Gabriel Perici", price: "$2,100" },
-              { img: artwork1, title: "Reflections", artist: "Gabriel Perici", price: "$2,800" },
-              { img: artwork2, title: "Evening Glow", artist: "Gabriel Perici", price: "$1,950" },
+              { img: artwork1, title: "Abstract Expression", artist: "Gabriel Perici" },
+              { img: artwork2, title: "Urban Dreams", artist: "Gabriel Perici" },
+              { img: artwork3, title: "Color Symphony", artist: "Gabriel Perici" },
+              { img: artwork4, title: "Light Studies", artist: "Gabriel Perici" },
+              { img: artwork1, title: "Reflections", artist: "Gabriel Perici" },
+              { img: artwork2, title: "Evening Glow", artist: "Gabriel Perici" },
             ].map((item, index) => (
               <Card key={index} className="overflow-hidden group cursor-pointer hover:shadow-elegant transition-smooth">
                 <div className="relative h-64 overflow-hidden">
@@ -93,8 +93,7 @@ const Artists = () => {
                 </div>
                 <CardContent className="p-4">
                   <h3 className="font-semibold text-foreground mb-1">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground mb-2">{item.artist}</p>
-                  <p className="text-lg font-bold text-primary">{item.price}</p>
+                  <p className="text-sm text-muted-foreground">{item.artist}</p>
                 </CardContent>
               </Card>
             ))}
